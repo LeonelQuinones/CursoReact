@@ -1,3 +1,5 @@
+import CartWidget from "../CartWidget/CartWidget"
+
 const NavBar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -19,7 +21,7 @@ const NavBar = () => {
                         </li>
                     </ul>
                 </div>
-                <img src="/carrito-compras.png" width="70" />
+                <CartWidget tamaño= "70px" />
             </div>
         </nav>
     )
