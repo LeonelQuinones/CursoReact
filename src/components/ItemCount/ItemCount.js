@@ -4,11 +4,15 @@ const ItemCount = () => {
     const [count, setCount] = useState(0)
 
     const decrement = () => {
-        setCount((count) => count - 1)
+        if (count > 0) {
+            setCount((count) => count - 1)
+        }
     }
     
     const increment = () => {
-        setCount((count) => count + 1)
+        if (count < 10) {
+            setCount((count) => count + 1)
+        }
     }
     
     return (
