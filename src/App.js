@@ -8,7 +8,7 @@ function App() {
     <div>
       <NavBar />
       <ItemListContainer greeting= "Hola Coders" color= "red" tamaño= "100px"/>
-      <ItemCount />
+      <ItemCount stock={5}/>
     </div>
   );
 }
