@@ -1,0 +1,7 @@
+.card-detail {
+    width: 450px;
+    background-color: rgb(204, 209, 131);
+    border: 10px solid rgb(135, 139, 73);
+    margin: auto;
+    text-align: center;
+}

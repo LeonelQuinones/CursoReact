@@ -1,0 +1,22 @@
+.Option {
+    text-decoration: none;
+    padding: 5px;
+    background-color: rgb(204, 209, 131);
+    color: #ffff;
+}
+
+.ActiveOption {
+    text-decoration: none;
+    padding: 5px;
+    background-color: rgb(173, 179, 97);
+    color: #000;
+    border: 1px solid #000;
+}
+
+.Option:hover {
+    color: #ffff;
+}
+
+.ActiveOption:hover {
+    color: #000;
+}

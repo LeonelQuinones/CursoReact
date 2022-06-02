@@ -3,14 +3,20 @@ import NavBar from './components/Navbar/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemCount from './components/ItemCount/ItemCount';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <div>
-      <NavBar />
-      <ItemListContainer greeting= "Hola Coders" color= "red" tamaño= "100px"/>
-      <ItemCount stock={5}/>
-      <ItemDetailContainer />
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path='/' element={<ItemListContainer greeting= 'Todos los productos' color= "#7a2424" tamaño= "70px"/>} />
+          <Route path='/categoria/:categoriaId' element={<ItemListContainer greeting= 'Productos filtrados'/>}/>
+          <Route path='/detail/:productId' element={<ItemDetailContainer />}/>
+        </Routes>
+        <ItemCount stock={10}/>
+      </BrowserRouter>
     </div>
   );
 }
