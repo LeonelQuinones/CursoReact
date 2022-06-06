@@ -1,7 +1,23 @@
-.card-detail {
-    width: 450px;
-    background-color: rgb(204, 209, 131);
-    border: 10px solid rgb(135, 139, 73);
-    margin: auto;
+.seccion-detail {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.detalle-productos {
     text-align: center;
+    margin-top: 30px;
+}
+
+.boton-finalizar-compra {
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+.boton-finalizar-compra:hover {
+    color: #ffff;
+    background-color: #288328;
+    border-color: #288328;
 }

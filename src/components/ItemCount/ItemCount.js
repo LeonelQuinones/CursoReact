@@ -1,10 +1,11 @@
+import './ItemCount.css'
 import { useState } from "react"
 
-const ItemCount = ({stock = 0}) => {
-    const [count, setCount] = useState(1)
+const ItemCount = ({onConfirm, stock, inicio = 0}) => {
+    const [count, setCount] = useState(inicio)
 
     const decrement = () => {
-        if (count > 1) {
+        if (count > 0) {
             setCount((count) => count - 1)
         }
     }
@@ -16,10 +17,11 @@ const ItemCount = ({stock = 0}) => {
     }
     
     return (
-        <div style={{display: 'flex'}}>
-            <button onClick={decrement} className= 'btn btn-outline-danger px-5'>-</button>
-            <h1 className='mx-5'>{count}</h1>
-            <button onClick={increment} className= 'btn btn-outline-success px-5'>+</button>
+        <div style={{display: 'flex', justifyContent: 'center'}}>
+            <button onClick={decrement} className= 'btn btn-outline-danger px-3'>-</button>
+            <h1 className='mx-3'>{count}</h1>
+            <button onClick={increment} className= 'btn btn-outline-success px-3'>+</button>
+            <button className='boton-agregar-carrito' onClick={() => onConfirm(count)}>Agregar al carrito</button>
         </div>
     )
 }

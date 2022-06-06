@@ -1,14 +1,14 @@
 .Option {
     text-decoration: none;
     padding: 5px;
-    background-color: rgb(204, 209, 131);
+    background-color: #ccd183;
     color: #ffff;
 }
 
 .ActiveOption {
     text-decoration: none;
     padding: 5px;
-    background-color: rgb(173, 179, 97);
+    background-color: #adb361;
     color: #000;
     border: 1px solid #000;
 }

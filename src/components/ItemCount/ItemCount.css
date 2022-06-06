@@ -1,0 +1,11 @@
+.boton-agregar-carrito {
+    margin-left: 50px;
+    border: 1px solid #000;
+    color: #000;
+}
+
+.boton-agregar-carrito:hover {
+    color: #ffff;
+    background-color: #288328;
+    border-color: #288328;
+}
