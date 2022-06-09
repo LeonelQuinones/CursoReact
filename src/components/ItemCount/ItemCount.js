@@ -1,11 +1,11 @@
 import './ItemCount.css'
 import { useState } from "react"
 
-const ItemCount = ({onConfirm, stock, inicio = 0}) => {
+const ItemCount = ({onConfirm, stock, inicio = 1}) => {
     const [count, setCount] = useState(inicio)
 
     const decrement = () => {
-        if (count > 0) {
+        if (count > inicio) {
             setCount((count) => count - 1)
         }
     }
