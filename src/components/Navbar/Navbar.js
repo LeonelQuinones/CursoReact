@@ -1,13 +1,20 @@
 import './NavBar.css'
 import CartWidget from "../CartWidget/CartWidget"
 import { Link, NavLink } from "react-router-dom"
+import { useContext } from 'react'
+import CartContext from "../../context/CartContext"
+
 
 const NavBar = () => {
+
+    const { getQuantity } = useContext(CartContext)
+    const cantidad = getQuantity()
+    
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
                 <Link to={'/'}>
-                    <img src="/logo-zapas.png" width="90" />
+                    <img src="/logo-zapas.png" width="90" alt= "Logo"/>
                 </Link>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav mx-auto fs-5">
@@ -16,7 +23,7 @@ const NavBar = () => {
                         <NavLink to={'/categoria/remeras'} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Remeras</NavLink>
                     </ul>
                 </div>
-                <CartWidget tamaño= "70px" />
+                {cantidad > 0 && <CartWidget tamaño= "70px" />}
             </div>
         </nav>
     )

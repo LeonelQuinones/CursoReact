@@ -20,11 +20,43 @@
     font-weight: 600;
 }
 
-.boton-eliminar {
+.boton-eliminar-item {
     border: 1px solid #ae1c1c;
     background-color: #ae1c1c;
     color: #fff;
     padding: 0;
     width: 35px;
     margin: 0 auto;
+}
+
+.precio-total {
+    font-size: 20px;
+    margin-right: 100px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 3px;
+    font-weight: 600;
+}
+
+.boton-eliminar-todo {
+    color: #fff;
+    background-color: #ae1c1c;
+    border: none;
+    padding: 5px 25px;
+}
+
+.carrito-vacio {
+    text-align: center;
+    margin: 100px 0;
+}
+
+.ir-catalogo {
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    padding: 10px 30px;
+}
+
+.ir-catalogo:hover {
+    color: #fff;
+    background-color: #288328;
 }
