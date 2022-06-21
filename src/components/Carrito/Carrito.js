@@ -28,8 +28,9 @@ const Carrito = () => {
                         )})
                     }
                     <div style={{display: 'flex', justifyContent: 'center'}}>
-                        <div className='precio-total'>Precio Total: ${totalCompra()}</div>
                         <button className='boton-eliminar-todo' onClick={() => removeAll()}>Limpiar Carrito</button>
+                        <div className='precio-total'>Precio Total: ${totalCompra()}</div>
+                        <Link to='/orden'>Comprar</Link>
                     </div>
                 </div>}
         </div>
