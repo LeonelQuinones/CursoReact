@@ -1,19 +1,34 @@
-import { useContext } from "react"
+import './Ordenes.css'
+import { useContext, useState } from "react"
 import CartContext from "../../context/CartContext"
 import { addDoc, collection, writeBatch, getDocs, query, where, documentId } from 'firebase/firestore'
 import { db } from '../../services/firebase';
 import Formulario from "../Formulario/Formulario";
-
+import swal from 'sweetalert';
+import { useNavigate } from 'react-router-dom';
 
 const Ordenes = () => {
 
     const { cart, totalCompra, removeAll } = useContext(CartContext)
 
+    const [ datos, setDatos ] = useState({
+        nombre: '',
+        email: '',
+        telefono: '',
+        direccion: ''
+    })
+
+    const onDatos = (data) => {
+        setDatos(data)
+    }
+
+    const navigate = useNavigate();
+
     const crearOrden = () => {
         console.log('crear orden')
 
         const objOrden = {
-            comprador: '',
+            datos,
             items: cart,
             total: totalCompra()
         }
@@ -49,20 +64,39 @@ const Ordenes = () => {
             }).then(({id}) => {
                 batch.commit()
                 removeAll()
+                swal({
+                    title: "¡Compra exitosa!",
+                    text: "Tu pedido sera entregado en las proximas 48hs.",
+                    icon: "success",
+                    button: "Listo",
+                });
+                navigate('/')
                 console.log(`El id de la orden es ${id}`)
             }).catch(error => {
                 console.log(error)
-                console.log('Algunos productos no tienen stock')
+                swal({
+                    title: "¡Error!",
+                    text: "Algunos productos no cuentan con stock",
+                    icon: "error",
+                    button: "Ok",
+                });
                 console.log(sinStock)
             }).finally(() => {
-                console.log('fin.')
+                console.log('Compra finalizada exitosamente')
             })
     }
 
     return(
-        <div>
-            <Formulario />
-            {/* <button onClick={crearOrden}>Finalizar Compra</button> */}
+        <div className='orden-container'>
+            <Formulario onConfirm={onDatos}/>
+            <div className='orden-datos'>
+                <h2 className='titulo-compra'>Orden de Compra</h2>
+                <p className='datos-compra'>Nombre: <span className='datos-cargados'>{datos.nombre}</span></p>
+                <p className='datos-compra'>Email: <span className='datos-cargados'>{datos.email}</span></p>
+                <p className='datos-compra'>Telefono: <span className='datos-cargados'>{datos.telefono}</span></p>
+                <p className='datos-compra'>Dirección: <span className='datos-cargados'>{datos.direccion}</span></p>
+                <button className='boton-orden' onClick={crearOrden}>Finalizar Compra</button>
+            </div>
         </div>
     )
 }

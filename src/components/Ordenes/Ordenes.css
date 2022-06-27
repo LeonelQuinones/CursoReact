@@ -1,0 +1,40 @@
+.orden-container {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    background-color: rgb(209, 74, 74);
+}
+
+.orden-datos {
+    background-color: #ffff;
+    width: 90%;
+    max-width: 400px;
+    padding: 50px 25px;
+    border-radius: 5px;
+    margin: 30px auto;
+}
+
+.titulo-compra {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.datos-compra {
+    margin-bottom: 50px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #000;
+}
+
+.boton-orden {
+    border: none;
+    background-color: rgb(25, 152, 25);
+    padding: 10px 50px;
+    display: block;
+    margin: 50px auto 0 auto;
+    color: #ffff;
+}
+
+.datos-cargados {
+    font-size: 18px;
+    font-weight: 800;
+}

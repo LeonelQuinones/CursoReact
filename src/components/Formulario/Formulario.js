@@ -1,36 +1,35 @@
+import './Formulario.css'
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 
-const Formulario = () => {
-    const { register, handleSubmit, formState: {errors} } = useForm()
+const Formulario = ({ onConfirm }) => {
+    const { register, handleSubmit, formState: { errors } } = useForm()
 
-    const [datos, setDatos] = useState({
-        nombre: '',
-        email: '',
-        telefono: '',
-        direccion: ''
-    })
+    const [datos, setDatos] = useState([])
 
     const datosForm = (data) => {
-        console.log(data)
+        setDatos(data)
     }
 
-    return(
-        <div>
-            <h2>Formulario</h2>
-            <form onSubmit={handleSubmit(datosForm)}>
-                <div>
+    return (
+        <div className='form-container'>
+            <form className='formulario' onSubmit={handleSubmit(datosForm)}>
+                <h2 className='t-form'>Formulario</h2>
+
+                <div className='input-container'>
                     <label>Nombre</label>
-                    <input type='text' {...register('nombre', {
+                    <input className='form-input' type='text' {...register('nombre', {
                         required: {
                             value: true,
                             message: 'Campo incompleto'
-                        }})} />
+                        }
+                    })} />
                     {errors.nombre && <p>{errors.nombre.message}</p>}
                 </div>
-                <div>
+
+                <div className='input-container'>
                     <label>Email</label>
-                    <input type='email' {...register('email', {
+                    <input className='form-input' type='email' {...register('email', {
                         required: {
                             value: true,
                             message: 'Campo incompleto'
@@ -38,12 +37,14 @@ const Formulario = () => {
                         pattern: {
                             value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
                             message: "El formato no es correcto"
-                        }})} />
+                        }
+                    })} />
                     {errors.email && <p>{errors.email.message}</p>}
                 </div>
-                <div>
+
+                <div className='input-container'>
                     <label>Teléfono</label>
-                    <input type='number' {...register('telefono', {
+                    <input className='form-input' type='number' {...register('telefono', {
                         required: {
                             value: true,
                             message: 'Campo incompleto'
@@ -51,19 +52,23 @@ const Formulario = () => {
                         maxLength: {
                             value: 10,
                             message: "El maximo de caracteres es 10"
-                        }})} />
+                        }
+                    })} />
                     {errors.telefono && <p>{errors.telefono.message}</p>}
                 </div>
-                <div>
+
+                <div className='input-container'>
                     <label>Dirección</label>
-                    <input type='text' {...register('direccion', {
+                    <input className='form-input' type='text' {...register('direccion', {
                         required: {
                             value: true,
                             message: 'Campo incompleto'
-                        }})} />
+                        }
+                    })} />
                     {errors.direccion && <p>{errors.direccion.message}</p>}
                 </div>
-                <input type="submit" />
+                
+                <button className='boton-form' type="submit" onClick={() => onConfirm(datos)}>Cargar Datos</button>
             </form>
         </div>
     )

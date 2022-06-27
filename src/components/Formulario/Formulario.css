@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form-container {
+    background-color: #ffff;
+    width: 90%;
+    max-width: 400px;
+    padding: 50px 25px;
+    border-radius: 5px;
+    margin: 30px auto;
+}
+
+.formulario {
+    display: grid;
+    gap: 15px;
+}
+
+.t-form {
+    text-align: center;
+    font-size: 30px;
+}
+
+.input-container {
+    display: grid;
+    grid-auto-columns: 100%;
+}
+
+.form-input {
+    font-size: 15px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid rgb(98, 98, 98);
+}
+
+.boton-form {
+    margin-top: 20px;
+    font-size: 20px;
+    background-color: rgb(41, 130, 208);
+    color: #ffff;
+    border: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
