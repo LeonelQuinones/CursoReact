@@ -40,10 +40,14 @@
 .boton-form {
     margin-top: 20px;
     font-size: 20px;
-    background-color: rgb(41, 130, 208);
+    background-color: #0f2f24;
     color: #ffff;
     border: none;
     padding: 10px 0;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.boton-form:hover {
+    background-color: #1d5c46;
 }

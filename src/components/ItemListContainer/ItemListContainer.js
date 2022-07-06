@@ -5,8 +5,9 @@ import { useParams } from "react-router-dom"
 import ClipLoader from "react-spinners/ClipLoader";
 import { getDocs, collection, query, where } from "firebase/firestore";
 import { db } from '../../services/firebase';
+import Filtro from '../Filtro/Filtro';
 
-const ItemListContainer = (props) => {
+const ItemListContainer = () => {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
 
@@ -43,7 +44,7 @@ const ItemListContainer = (props) => {
 
     return (
         <div>
-            <h1 style={{color: props.color, fontSize: props.tamaño, textAlign:'center'}}>{props.greeting}</h1>
+            <Filtro />
             <ItemList products={products} />
         </div>
     )

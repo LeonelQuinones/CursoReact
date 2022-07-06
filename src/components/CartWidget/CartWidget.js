@@ -2,6 +2,7 @@ import './CartWidget.css'
 import { useContext } from "react"
 import CartContext from "../../context/CartContext"
 import { Link } from "react-router-dom"
+import { BsBagDash } from "react-icons/bs";
 
 const CartWidget = (props) => {
 
@@ -11,8 +12,8 @@ const CartWidget = (props) => {
 
     return (
         <Link to='/carrito' className='cart-widget'>
-            <img src= "/carrito-compras.png" style={{width: props.tamaño}} alt= "cart-widget"/>
-            {cantidad}
+            <BsBagDash className='mb-1' size='28' color='#f9f9fb'/>
+            <span className='cantidad-cart'>{cantidad}</span>
         </Link>
     )
 }

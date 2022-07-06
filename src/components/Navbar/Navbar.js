@@ -1,8 +1,9 @@
 import './NavBar.css'
 import CartWidget from "../CartWidget/CartWidget"
-import { Link, NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { useContext } from 'react'
 import CartContext from "../../context/CartContext"
+import { Navbar, Nav, Container } from 'react-bootstrap'
 
 
 const NavBar = () => {
@@ -11,21 +12,24 @@ const NavBar = () => {
     const cantidad = getQuantity()
     
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <div className="container-fluid">
+
+        <Navbar className='navBg' variant='dark' expand="lg">
+            <Container>
                 <Link to={'/'}>
-                    <img src="/logo-zapas.png" width="90" alt= "Logo"/>
+                    <img src="/logo-solo-deportes.png" width="150" alt= "Logo"/>
                 </Link>
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav mx-auto fs-5">
-                        <NavLink to={'/categoria/zapatillas'} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Zapatillas</NavLink>
-                        <NavLink to={'/categoria/pantalones'} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'} style={{margin: '0 100px'}}>Pantalones</NavLink>
-                        <NavLink to={'/categoria/remeras'} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Remeras</NavLink>
-                    </ul>
-                </div>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav" className='nav-acomodado'>
+                    <Nav className="mx-auto">
+                        <Nav.Link className='mx-4 text-center links-nav' as={Link} to='/' >Inicio</Nav.Link>
+                        <Nav.Link className='mx-4 text-center links-nav' as={Link} to='/productos' >Productos</Nav.Link>
+                        <Nav.Link className='mx-4 text-center links-nav' as={Link} to='/visitanos'>Visitanos</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
                 {cantidad > 0 && <CartWidget tamaño= "70px" />}
-            </div>
-        </nav>
+            </Container>
+        </Navbar>
+        
     )
 }
 

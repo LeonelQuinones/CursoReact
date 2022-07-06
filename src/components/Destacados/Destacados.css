@@ -1,0 +1,32 @@
+.card-destacado {
+    border: 5px solid #0f2f24;
+    padding-bottom: 30px;
+}
+
+.img-container {
+    overflow: hidden;
+}
+
+.img-container img {
+    width: 100%;
+}
+
+.card-destacado h1 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+}
+
+.card-destacado img:hover {
+    transform: scale(1.2);
+}
+
+.boton-destacados {
+    text-decoration: none;
+    background-color: #0f2f24;
+    padding: 10px 70px;
+    color: #ffff;
+}
+
+.boton-destacados:hover {
+    color: #ffff;
+}

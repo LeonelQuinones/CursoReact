@@ -1,0 +1,14 @@
+.lista-destacados {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+@media (max-width: 500px) {
+    .lista-destacados {
+        grid-template-columns: 1fr;
+    }
+}

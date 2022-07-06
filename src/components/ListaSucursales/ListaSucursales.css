@@ -1,0 +1,12 @@
+.lista-sucursales {
+    display: grid;
+    width: 70%;
+    margin: 80px auto 0 auto;
+    gap: 30px;
+}
+
+@media (max-width: 500px) {
+    .lista-sucursales {
+        width: 80%;
+    }
+}

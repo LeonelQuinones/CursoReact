@@ -1,22 +1,23 @@
-.Option {
-    text-decoration: none;
-    padding: 5px;
-    background-color: #ccd183;
-    color: #ffff;
+.navBg {
+    background-color: #0f2f24;
 }
 
-.ActiveOption {
-    text-decoration: none;
-    padding: 5px;
-    background-color: #adb361;
-    color: #000;
-    border: 1px solid #000;
+.cantidad-cart {
+    margin-left: 8px;
+    color: #d3d3d3;
 }
 
-.Option:hover {
-    color: #ffff;
+.links-nav {
+    font-size: 17px;
+    font-weight: 500;
 }
 
-.ActiveOption:hover {
-    color: #000;
+.nav-acomodado {
+    margin-right: 70px;
+}
+
+@media (max-width: 500px) {
+    .nav-acomodado {
+        margin: 0;
+    }
 }

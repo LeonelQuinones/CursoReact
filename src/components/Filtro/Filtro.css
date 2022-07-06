@@ -1,0 +1,33 @@
+.filtro-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px 0;
+    background-color: #164333;
+    text-align: center;
+}
+
+.filtro {
+    text-decoration: none;
+    color: #f9f9fb;
+    margin: 0 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.filtro:hover {
+    color: #40c194;
+}
+
+@media (max-width: 500px) {
+    .filtro-container {
+        display: grid;
+        gap: 15px;
+        padding: 10px 0;
+        background-color: #ffff;
+    }
+
+    .filtro {
+        background-color: #0f2f24;
+        padding: 10px 0;
+    }
+}

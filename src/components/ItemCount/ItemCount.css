@@ -2,10 +2,12 @@
     margin-left: 50px;
     border: 1px solid #000;
     color: #000;
+    padding: 0 20px;
+    font-weight: 500;
 }
 
 .boton-agregar-carrito:hover {
     color: #ffff;
-    background-color: #288328;
-    border-color: #288328;
+    background-color: #0f2f24;
+    border-color: #0f2f24;
 }

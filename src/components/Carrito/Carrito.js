@@ -16,21 +16,24 @@ const Carrito = () => {
                 </div>
                 : <div className='carrito-container'>
                     <h1 className='t-carrito'>Tu carrito</h1>
-                    {cart.map(prod => {
-                        return(
-                            <div key={prod.id} className='prod-carrito'>
-                                <div>{prod.nombre}</div>
-                                <div>Cantidad: {prod.cantidad}</div>
-                                <div>Precio x Unidad: ${prod.precio}</div>
-                                <div>Subtotal: ${prod.precio * prod.cantidad}</div>
-                                <button className='boton-eliminar-item' onClick={() => removeItem(prod.id)}>X</button>
-                            </div>
-                        )})
-                    }
-                    <div style={{display: 'flex', justifyContent: 'center'}}>
+                    <div className='contenido-carrito'>
+                        {cart.map(prod => {
+                            return(
+                                <div key={prod.id} className='prod-carrito'>
+                                    <img src={prod.img} alt={prod.nombre}/>
+                                    <div>{prod.nombre}</div>
+                                    <div>Cantidad: {prod.cantidad}</div>
+                                    <div>Precio unitario: ${prod.precio}</div>
+                                    <div>Subtotal: ${prod.precio * prod.cantidad}</div>
+                                    <button className='boton-eliminar-item' onClick={() => removeItem(prod.id)}>X</button>
+                                </div>
+                            )})
+                        }
+                    </div>
+                    <div className='div-botones-carrito'>
                         <button className='boton-eliminar-todo' onClick={() => removeAll()}>Limpiar Carrito</button>
                         <div className='precio-total'>Precio Total: ${totalCompra()}</div>
-                        <Link to='/orden'>Comprar</Link>
+                        <Link className='boton-orden' to='/orden'>Comprar</Link>
                     </div>
                 </div>}
         </div>

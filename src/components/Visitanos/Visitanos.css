@@ -1,0 +1,27 @@
+.contacto-container {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 70px auto;
+    text-align: center;
+}
+
+.contacto-container h3 {
+    margin-top: 20px;
+    color: #0f2f24;
+}
+
+.contacto-container p {
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+@media (max-width: 500px) {
+    .contacto-container {
+        width: 80%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, fr);
+        gap: 25px;
+        margin: 50px auto;
+    }
+}

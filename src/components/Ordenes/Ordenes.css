@@ -27,11 +27,15 @@
 
 .boton-orden {
     border: none;
-    background-color: rgb(25, 152, 25);
+    background-color: #0f2f24;;
     padding: 10px 50px;
     display: block;
     margin: 50px auto 0 auto;
     color: #ffff;
+}
+
+.boton-orden:hover {
+    background-color: #1d5c46;
 }
 
 .datos-cargados {

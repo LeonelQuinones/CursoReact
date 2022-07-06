@@ -1,22 +1,37 @@
 .card-producto {
-    width: 250px;
-    padding: 30px;
-    margin: 30px;
-    background-color: rgb(204, 209, 131);
-    border: 5px solid rgb(135, 139, 73);
+    width: 300px;
+    padding: 0 0 30px 0;
+    margin: 20px;
     text-align: center;
+    font-size: 20px;
+    border-radius: 20px;
+    background: #dddddd;
+    box-shadow:  12px 12px 24px #8e8e8e,
+                -12px -12px 24px #ffffff;
+}
+
+.card-producto img {
+    width: 100%;
+}
+
+.card-producto h1 {
+    font-size: 20px;
+}
+
+.card-producto p {
     font-size: 20px;
 }
 
 .boton-detalle {
     text-decoration: none;
-    padding: 7px 15px;
-    background-color: #7a2424;
+    padding: 10px 30px;
+    background-color: #0f2f24;
     color: #ffff;
     font-size: 15px;
-    border-radius: 25px;
+    border-radius: 3px;
 }
 
 .boton-detalle:hover {
+    background-color: #194d3a;
     color: #ffff;
 }
