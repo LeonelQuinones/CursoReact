@@ -37,7 +37,7 @@ const Visitanos = () => {
     }
 
     return(
-        <div>
+        <div className='visitanos'>
             <ListaSucursales sucursales = {sucursales} />
             <div className='contacto-container'>
                 <div className='contacto'>
