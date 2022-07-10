@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Merriweather:wght@900&display=swap');
+
 .card-destacado {
     border: 5px solid #0f2f24;
     padding-bottom: 30px;
+    background-color: #ffff;
 }
 
 .img-container {
@@ -12,12 +15,15 @@
 }
 
 .card-destacado h1 {
-    font-size: 20px;
+    font-size: 22px;
     margin: 20px 0 30px 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
 }
 
 .card-destacado img:hover {
     transform: scale(1.2);
+    transition: all 0.5s;
 }
 
 .boton-destacados {
@@ -25,6 +31,7 @@
     background-color: #0f2f24;
     padding: 10px 70px;
     color: #ffff;
+    font-family: 'Lato', sans-serif;
 }
 
 .boton-destacados:hover {

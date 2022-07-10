@@ -1,8 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Merriweather:wght@900&display=swap');
+
 .inicio-container {
     display: grid;
     gap: 20px;
-    background-image: url('../../../public/fondo.jpg');
+    background-image: url('../../../public/fondo-2.png');
     background-repeat: no-repeat;
+}
+
+.inicio-container h1 {
+    font-family: 'Merriweather', serif;
+}
+
+.inicio-container p {
+    font-family: 'Lato', sans-serif;
 }
 
 .div-bienvenidos {
@@ -22,11 +32,11 @@
 
 .div-inicio-contacto {
     text-align: center;
-    font-size: 28px;
+    font-size: 25px;
     background-color: #0f2f24;
     color: #ffff;
     margin-bottom: 70px;
-    padding: 43px 0 30px 0;
+    padding: 55px 0 40px 0;
 }
 
 .link-visitanos {

@@ -1,12 +1,14 @@
 .lista-sucursales {
     display: grid;
     width: 70%;
-    margin: 80px auto 0 auto;
+    margin: 0 auto;
+    padding: 80px 0;
     gap: 30px;
 }
 
 @media (max-width: 500px) {
     .lista-sucursales {
         width: 80%;
+        padding: 80px 0 20px 0;
     }
 }

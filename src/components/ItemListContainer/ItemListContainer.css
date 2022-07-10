@@ -5,3 +5,7 @@
     top: 200px;
     left: 50%;
 }
+
+.item-list-container {
+    background-image: url('../../../public/fondo-2.png');
+}

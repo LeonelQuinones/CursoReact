@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 .card-sucursal {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -8,12 +10,28 @@
     grid-column: 2/5;
 }
 
+.info-sucursal h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    padding-bottom: 30px;
+}
+
+.info-sucursal p {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+}
+
 .card-sucursal hr {
     grid-column: 1/5;
 }
 
 .img-sucursal {
     margin: 0 auto;
+    border: 4px solid #2a2a2a;
+}
+
+.img-sucursal img {
+    width: 300px;
 }
 
 @media (max-width: 500px) {

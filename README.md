@@ -39,4 +39,4 @@ Encontraran las misma en el archivo de ejemplo llamado **".env.variables"**
 
 
 
-![alt text](./public/primera-entrega-react.gif "Tittle")
+![alt text](./public/proyecto-final.gif "Tittle")

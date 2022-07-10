@@ -23,7 +23,7 @@ const ItemDetail = ({id, img, nombre, precio, descripcion, stock}) => {
             <div className='detalle-productos'>
                 <h1>{nombre}</h1>
                 <h2>${precio}</h2>
-                <p>Stock: {stock}</p>
+                <p className='stock'>Stock: {stock}</p>
                 <p style={{fontSize:'20px', marginBottom: '30px'}}>{descripcion}</p>
                 {cantidad > 0 
                 ? <Link to='/carrito' className='boton-ir-carrito'>Ir al Carrito</Link>

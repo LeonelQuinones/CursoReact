@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 .t-carrito {
     text-align: center;
     margin: 20px 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
 }
 
 .carrito-container {
-    margin: 20px;
+    padding: 20px;
+    background-image: url('../../../public/fondo-2.png');
 }
 
 .prod-carrito {
@@ -20,6 +25,10 @@
 
 .prod-carrito img {
     width: 100%;
+}
+
+.prod-carrito div {
+    font-family: 'Lato', sans-serif;
 }
 
 .contenido-carrito {
@@ -53,12 +62,14 @@
     background-color: #ae1c1c;
     border: none;
     margin: auto auto 0 auto;
+    font-family: 'Lato', sans-serif;
 }
 
 .precio-total {
     margin-top: 50px;
     font-size: 20px;
     border-bottom: 2px solid #000;
+    font-family: 'Lato', sans-serif;
     font-weight: 600;
 }
 
@@ -66,6 +77,7 @@
     text-decoration: none;
     color: #ffff;
     background-color: #0f2f24;
+    font-family: 'Lato', sans-serif;
 }
 
 .boton-orden:hover {
@@ -111,6 +123,8 @@
 .carrito-vacio {
     text-align: center;
     margin: 150px 0 100px 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
 }
 
 .ir-catalogo {
@@ -118,6 +132,8 @@
     color: #fff;
     background-color: #000;
     padding: 10px 30px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
 }
 
 .ir-catalogo:hover {

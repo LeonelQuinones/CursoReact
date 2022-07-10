@@ -38,6 +38,7 @@ const Visitanos = () => {
 
     return(
         <div className='visitanos'>
+            <h2 className='titulo'>Nuestras Sucursales</h2>
             <ListaSucursales sucursales = {sucursales} />
             <div className='contacto-container'>
                 <div className='contacto'>

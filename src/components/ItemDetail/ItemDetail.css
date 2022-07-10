@@ -1,12 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 .seccion-detail {
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    background-image: url('../../../public/fondo-2.png');
 }
 
 .detalle-productos {
     text-align: center;
     margin-top: 50px;
+    font-family: 'Lato', sans-serif;
+}
+
+.detalle-productos h1 {
+    font-weight: 900;
+}
+
+.detalle-productos h2 {
+    font-weight: 900;
+}
+
+.stock {
+    font-weight: 900;
 }
 
 .boton-ir-carrito {

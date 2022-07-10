@@ -43,7 +43,7 @@ const ItemListContainer = () => {
     }
 
     return (
-        <div>
+        <div className='item-list-container'>
             <Filtro />
             <ItemList products={products} />
         </div>
